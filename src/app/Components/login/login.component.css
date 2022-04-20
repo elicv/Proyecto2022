@@ -7,7 +7,36 @@
 }
 
 .card-header{
-  background: rgb(37, 112, 2);
+  background: rgb(31, 156, 41);
   color: white;
 }
 
+.botoningresar{
+  background: rgb(31, 156, 41);
+  width: 100px;
+  color: white;
+  margin-top: 40px;
+  margin-left: 96px;
+}
+
+.linkcuenta{
+  text-decoration:none;
+  color: rgb(41, 180, 41);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.labels{
+  color: rgb(41, 180, 41);
+  margin-left: 20px;
+}
+.card-body{
+  background: rgb(155, 229, 165);
+}
+
+.input{
+  border: 0ch;
+  background: rgb(155, 229, 165);
+}
+
+::placeholder { color:rgb(41, 180, 41); }

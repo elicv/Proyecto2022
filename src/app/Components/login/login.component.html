@@ -4,16 +4,16 @@
     <b> Please Login</b>
   </div>
   <div class="card-body">
+    <label style="float: left;" class="labels">Email</label>
+    <input class ="form-control m-2 input" type="email" placeholder="______________________________________" [(ngModel)]= "usuario.email">
 
-    <label style="float: left;">Email</label>
-    <input class ="form-control m-2" type="email" placeholder="Ingrese su email" [(ngModel)]= "usuario.email">
+    <label style="float: left;" class="labels">password</label>
+    <input class ="form-control m-2 input" type="password" placeholder="______________________________________" [(ngModel)]= "usuario.password">
+    
+    <label class="labels" style="float: left;"><a class="linkcuenta" href="./crearcuenta">Crear cuenta</a></label>
 
-    <label style="float: left;">password</label>
-    <input class ="form-control m-2" type="password" placeholder="Ingrese su password" [(ngModel)]= "usuario.password">
-
-    <button class="btn btn-primary btn-block m-2" (click)="Ingresar()">Ingresar</button>
-
-    <label>No tienes cuenta? <a href="./crearcuenta">Crear cuenta</a></label>
+    <button class="botoningresar form-control" (click)="Ingresar()">LOGIN</button>
+   
 
   </div>
 </div>
