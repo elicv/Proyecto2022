@@ -1,7 +1,13 @@
 body{
-  background-image: url(./assets/Fondo-casa.jpg);
+  /* background-image: url(./assets/Fondo-casa.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 100vh; */
+
+  background-color: red;
+}
+
+head{
+  background: red;
 }
