@@ -1,7 +1,46 @@
-.boton{
-  background: rgb(44, 216, 28);
-  border-color: rgb(59, 202, 59);
-  border-width: 4px;
-  border-style: solid;
-  color: white;
-}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vh;
+  height: 100vh;
+ }
+ 
+ .card-header{
+   background: rgb(31, 156, 41);
+   color: white;
+ }
+ 
+ .botoningresar{
+   background: rgb(44, 216, 28);
+   width: 94px;
+   color: white;
+   margin-top: 40px;
+   margin-left: 96px;
+   border-color: rgb(59, 202, 59);
+   border-width: 4px;
+   border-style: solid;
+  
+ }
+ 
+ .linkcuenta{
+   text-decoration:none;
+   color: rgb(41, 180, 41);
+   font-size: 12px;
+   font-weight: bold;
+ }
+ 
+ .labels{
+   color: rgb(41, 180, 41);
+   margin-left: 20px;
+ }
+ .card-body{
+   background: rgb(155, 229, 165);
+ }
+ 
+ .input{
+   border: 0ch;
+   background: rgb(155, 229, 165);
+ }
+ 
+ ::placeholder { color:rgb(41, 180, 41); }

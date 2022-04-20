@@ -1,5 +1,19 @@
-<p>Este modulo se encuentra en desarrollo!</p>
-<button class="boton" (click)="volver()">Regresar</button>
+<div class="container">
+<div class="card text-center">
+  <div class="card-header">
+    <b> Register</b>
+  </div>
+  <div class="card-body">
+    <label style="float: left;" class="labels">Email</label>
+    <input class ="form-control m-2 input" type="email" placeholder="______________________________________" [(ngModel)]= "usuario.email">
 
+    <label style="float: left;" class="labels">password</label>
+    <input class ="form-control m-2 input" type="password" placeholder="______________________________________" [(ngModel)]= "usuario.password">
+    
+    <button class="botoningresar form-control" (click)="Ingresar()">SING IN</button>
+  </div>
+  <button class="form-control" (click)="volver()">Regresar</button>
+</div>
 
+</div>
 

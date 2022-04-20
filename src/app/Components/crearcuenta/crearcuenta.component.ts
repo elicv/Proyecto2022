@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
+import { LoginService } from 'src/app/Services/login.service';
 
 @Component({
   selector: 'app-crearcuenta',
@@ -9,8 +10,25 @@ import { Router } from '@angular/router';
 })
 export class CrearcuentaComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  usuario = {
+    email: '',
+    password: ''
+  }
+  constructor(private router: Router,private loginService: LoginService){
+  }
+  Ingresar(){
+      console.log(this.usuario)
+      const {email, password} = this.usuario;
+      this.loginService.registro(email,password).then(res => {
 
+      if(res==null){
+        console.log("No sirve",res)
+      }else{
+        console.log("Se Resgistro correctamente",res)
+        this.router.navigate(['/home']);
+      }
+    });
+  }
   volver(){
     this.router.navigate(['/login']);
   }
