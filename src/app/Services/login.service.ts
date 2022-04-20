@@ -33,8 +33,7 @@ export class LoginService {
   }
 
   logout(){
-    localStorage.removeItem('user');
+    localStorage.removeItem('haroldrm12@gmail.com');
     this._Auth.signOut();
-    
   }
 }
