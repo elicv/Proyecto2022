@@ -25,6 +25,7 @@ export class CrearcuentaComponent implements OnInit {
         console.log("No sirve",res)
       }else{
         console.log("Se Resgistro correctamente",res)
+        alert("Se creo el usuario correctamente!!!")
         this.router.navigate(['/home']);
       }
     });

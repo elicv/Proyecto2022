@@ -22,7 +22,7 @@ export class LoginService {
     try{
         return  await this._Auth.createUserWithEmailAndPassword(email,password);
     }catch(error){
-      alert("No se puedo crear usuario")
+      alert("No se puedo crear usuario, verificar email o contraseña")
       console.log("El error es: " + error)
       return null;
     }
