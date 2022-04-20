@@ -33,7 +33,8 @@ export class LoginService {
   }
 
   logout(){
-    this._Auth.signOut()
-    localStorage.removeItem('user')
+    localStorage.removeItem('user');
+    this._Auth.signOut();
+    
   }
 }
