@@ -13,12 +13,14 @@ import { LoginComponent } from './Components/login/login.component';
 import { environment } from 'src/environments/environment';
 import { HomeComponent } from './Components/home/home.component';
 import { FormsModule } from '@angular/forms';
+import { CrearcuentaComponent } from './Components/crearcuenta/crearcuenta.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    CrearcuentaComponent
   ],
   imports: [
     BrowserModule,
