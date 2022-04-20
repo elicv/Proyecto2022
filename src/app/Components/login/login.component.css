@@ -12,11 +12,15 @@
 }
 
 .botoningresar{
-  background: rgb(31, 156, 41);
-  width: 100px;
+  background: rgb(44, 216, 28);
+  width: 94px;
   color: white;
   margin-top: 40px;
   margin-left: 96px;
+  border-color: rgb(59, 202, 59);
+  border-width: 4px;
+  border-style: solid;
+ 
 }
 
 .linkcuenta{
