@@ -1,0 +1,39 @@
+import { Injectable } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class LoginService {
+
+  constructor(private _Auth : AngularFireAuth ) {}
+
+  async login(email:string , password: string){
+    try{
+        return  await this._Auth.signInWithEmailAndPassword(email,password);
+    }catch(error){
+      alert("No se puedo loguear")
+      console.log("El error es: " + error)
+      return null;
+    }
+  }
+
+  async registro(email:string , password: string){
+    try{
+        return  await this._Auth.createUserWithEmailAndPassword(email,password);
+    }catch(error){
+      alert("No se puedo crear usuario")
+      console.log("El error es: " + error)
+      return null;
+    }
+  }
+
+  getUserLogged(){
+    return this._Auth.authState;
+  }
+
+  logout(){
+    this._Auth.signOut()
+    localStorage.removeItem('user')
+  }
+}
