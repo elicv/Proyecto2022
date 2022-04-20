@@ -31,9 +31,10 @@ export class CrearcuentaComponent implements OnInit {
     });
   }
   volver(){
+    this.loginService.logout();
     this.router.navigate(['/login']);
   }
-
+  
   ngOnInit(): void {
   }
 
