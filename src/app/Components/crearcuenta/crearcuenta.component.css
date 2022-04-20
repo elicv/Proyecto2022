@@ -42,5 +42,10 @@
    border: 0ch;
    background: rgb(155, 229, 165);
  }
+
+ .volver{
+   background: rgb(41, 180, 41);
+   color: white;
+ }
  
  ::placeholder { color:rgb(41, 180, 41); }
