@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
     email: '',
     password: ''
   }
+  
   constructor(private router: Router,private loginService: LoginService){
   }
   Ingresar(){

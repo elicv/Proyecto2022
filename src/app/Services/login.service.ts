@@ -6,11 +6,12 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
   providedIn: 'root'
 })
 export class LoginService {
-
-  constructor(private _Auth : AngularFireAuth,private firestore: AngularFirestore ) {}
   
-  createcollection(Collection: string){
-    this.firestore.collection(Collection).add({'Eduard':'guineo'})
+  constructor(private _Auth : AngularFireAuth,private firestore: AngularFirestore ) {}
+
+
+  createcollection(Collection: string, data?: unknown){
+    this.firestore.collection(Collection).add(data);
   }
 
   async login(email:string , password: string){

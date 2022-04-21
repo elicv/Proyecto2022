@@ -10,6 +10,13 @@ import { LoginService } from 'src/app/Services/login.service';
 })
 export class HomeComponent implements OnInit {
 
+
+  data = {
+    name: 'Los Angeles',
+    state: 'CA',
+    country: 'USA'
+  };
+
   constructor(private router: Router, private loginService: LoginService) { }
 
   volver(){
@@ -18,7 +25,7 @@ export class HomeComponent implements OnInit {
   }
 
   altausuario(){
-    this.loginService.createcollection('sd');
+    this.loginService.createcollection('Ciudad',this.data);
   }
 
   ngOnInit(): void {
