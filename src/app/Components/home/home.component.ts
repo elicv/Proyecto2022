@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/Services/login.service';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 
 @Component({
@@ -11,7 +10,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router, private loginService: LoginService,private firestore: AngularFirestore) { }
+  constructor(private router: Router, private loginService: LoginService) { }
 
   volver(){
     this.loginService.logout();
@@ -19,10 +18,11 @@ export class HomeComponent implements OnInit {
   }
 
   altausuario(){
-    this.firestore.cole
+    this.loginService.createcollection();
   }
 
   ngOnInit(): void {
+
   }
 
 }
