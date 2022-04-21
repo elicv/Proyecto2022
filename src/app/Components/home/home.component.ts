@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   }
 
   altausuario(){
-    this.loginService.createcollection();
+    this.loginService.createcollection('sd');
   }
 
   ngOnInit(): void {

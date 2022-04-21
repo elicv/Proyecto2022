@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -10,8 +9,8 @@ export class LoginService {
 
   constructor(private _Auth : AngularFireAuth,private firestore: AngularFirestore ) {}
   
-  createcollection(collection, dato){
-    this.firestore.collection(collection,dato)
+  createcollection(Collection: string){
+    this.firestore.collection(Collection).add({'Eduard':'guineo'})
   }
 
   async login(email:string , password: string){
