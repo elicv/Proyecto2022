@@ -1,12 +1,22 @@
 <nav class="navbar navbar-expand-lg navbar-light navbarnuevo">
   <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#"
+          >Home <span class="sr-only">(current)</span></a
+        >
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Features</a>
@@ -22,8 +32,11 @@
 </nav>
 
 <div class="body">
-  <p >WELCOME! </p>
+  <p>WELCOME!</p>
   <button class="boton" (click)="altausuario()">Back</button>
+
+  <h6>Lista de usuarios</h6>
+  <ul>
+    <li *ngFor = 'let user of listaUsuarios'> {{user}} </li>
+  </ul>
 </div>
-
-
