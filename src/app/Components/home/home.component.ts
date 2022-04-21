@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
     country: 'USA',
   };
 
-  listaUsuarios = [];
+  listaUsuarios: Array<unknown> = [];
 
   constructor(private router: Router, private loginService: LoginService) {}
 
@@ -25,17 +25,18 @@ export class HomeComponent implements OnInit {
 
   altausuario() {
     this.loginService.createcollection('Ciudad', this.data);
+    
   }
 
   ngOnInit(): void {
     this.loginService.getAll('Ciudad').then((res) => {
       res.subscribe((listausuarioref) => {
-        this.listaUsuarios = listausuarioref.map((usuarioref) => {
-          let usuario = usuarioref.payload.doc.data();
-          return usuario;
+        listausuarioref.forEach((user) => {
+          // user.payload.doc.data()
+          this.listaUsuarios.push(1);
         });
       });
     });
+    console.log(this.listaUsuarios);
   }
-
 }

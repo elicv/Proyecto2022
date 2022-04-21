@@ -33,10 +33,10 @@
 
 <div class="body">
   <p>WELCOME!</p>
-  <button class="boton" (click)="altausuario()">Back</button>
+  <button class="boton" (click)="volver()">Back</button>
 
   <h6>Lista de usuarios</h6>
   <ul>
-    <li *ngFor = 'let user of listaUsuarios'> {{user}} </li>
+    <li *ngFor = 'let user of listaUsuarios'> {{user | json}} </li>
   </ul>
 </div>
