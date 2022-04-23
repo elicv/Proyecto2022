@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/Services/login.service';
 
+import { Producto } from 'src/productos.model';
 
 @Component({
   selector: 'app-home',
@@ -10,14 +11,17 @@ import { LoginService } from 'src/app/Services/login.service';
 })
 export class HomeComponent implements OnInit {
 
-  data = {
-    id: 'a',
-    comida: '1'
+  producto: Producto = {
+    id: '',
+    nombre: '',
+    precio: '',
+    descripcion: ''
   }
+  
 
-  listaUsuarios: Array<unknown> = [];
+  listaproductos: Array<unknown> = [];
 
-  productos: productos[] = [];
+  productos: Producto[] = [];
   
 
   constructor(private router: Router, private loginService: LoginService) {}
@@ -27,10 +31,7 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
-  altausuario() {
-    this.loginService.createcollection('Ciudad', this.data);
-    
-  }
+
 
   ngOnInit(): void {
 
