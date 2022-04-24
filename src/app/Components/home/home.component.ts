@@ -17,9 +17,6 @@ export class HomeComponent implements OnInit {
     precio: '',
     descripcion: ''
   }
-  
-
-  listaproductos: Array<unknown> = [];
 
   productos: Producto[] = [];
   
@@ -31,9 +28,14 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
+  getEmpleados() {
+    this.loginService.getEmpleados().subscribe((res: Producto[]) => {
+      this.productos = res;
+    });
+  }
 
 
   ngOnInit(): void {
-
+    this.getEmpleados();
   }
 }
