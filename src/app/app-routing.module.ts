@@ -5,9 +5,12 @@ import { LoginComponent } from './Components/login/login.component';
 import { CrearcuentaComponent } from'./Components/crearcuenta/crearcuenta.component';
 import {AcercadeComponent} from './Components/acercade/acercade.component';
 
+import { AgregarProductoComponent } from './Components/agregar-producto/agregar-producto.component';
+
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
+  {path: 'Agregar', component: AgregarProductoComponent},
   {path: 'home', component: HomeComponent},
   {path: 'crearcuenta', component: CrearcuentaComponent},
   {path: 'acercade', component: AcercadeComponent},

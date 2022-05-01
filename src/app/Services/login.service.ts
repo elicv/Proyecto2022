@@ -20,9 +20,7 @@ export class LoginService {
     this.firestore.collection(Collection).add(data);
   }
 
-  async getAll(Collection: string){
-    return await this.firestore.collection(Collection).snapshotChanges();
-  }
+ 
 
   async login(email:string , password: string){
     try{

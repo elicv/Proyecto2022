@@ -1,0 +1,29 @@
+.boton{
+  background: rgb(44, 216, 28);
+  border-color: rgb(59, 202, 59);
+  border-width: 4px;
+  border-style: solid;
+  color: white;
+}
+
+
+.body{
+  background-image: url(https://img.freepik.com/foto-gratis/sala-estar-vacia-sofa-azul-plantas-mesa-sobre-fondo-pared-blanca-vacia-representacion-3d_41470-1778.jpg?size=626&ext=jpg&ga=GA1.2.1175707702.1640476800);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+ }
+
+ .navbarnuevo{
+   height: 100px;
+   background: #000000;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
+ }
+
+
+ .navbar-brand{
+   color: white;
+ }
