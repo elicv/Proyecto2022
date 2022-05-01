@@ -18,6 +18,7 @@ import { HomeComponent } from './Components/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { CrearcuentaComponent } from './Components/crearcuenta/crearcuenta.component';
 import { AcercadeComponent } from './Components/acercade/acercade.component';
+import { AgregarProductoComponent } from './Components/agregar-producto/agregar-producto.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AcercadeComponent } from './Components/acercade/acercade.component';
     LoginComponent,
     HomeComponent,
     CrearcuentaComponent,
-    AcercadeComponent
+    AcercadeComponent,
+    AgregarProductoComponent
   ],
   imports: [
     BrowserModule,
