@@ -11,15 +11,7 @@ import { Producto } from 'src/productos.model';
 })
 export class HomeComponent implements OnInit {
 
-  producto: Producto = {
-    id: '',
-    nombre: '',
-    precio: '',
-    descripcion: ''
-  }
-
-  productos: Producto[] = [];
-  
+  productos: Producto[] = [];  
 
   constructor(private router: Router, private loginService: LoginService) {}
 
@@ -33,7 +25,6 @@ export class HomeComponent implements OnInit {
       this.productos = res;
     });
   }
-
 
   ngOnInit(): void {
     this.getEmpleados();

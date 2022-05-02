@@ -15,12 +15,10 @@ export class LoginService {
   
   constructor(private _Auth : AngularFireAuth,private firestore: AngularFirestore, private FirestoreD: Firestore ) {}
 
-
   createcollection(Collection: string, data?: unknown){
     this.firestore.collection(Collection).add(data);
   }
 
- 
 
   async login(email:string , password: string){
     try{
@@ -50,9 +48,9 @@ export class LoginService {
     this._Auth.signOut();
   }
 
-  getEmpleados(): Observable<Producto[]> {
-    const empleados = collection(this.FirestoreD, 'Productos');
-    return collectionData(empleados, { idField: 'id' }) as Observable<Producto[]>
-  }
+    getEmpleados(): Observable<Producto[]> {
+      const empleados = collection(this.FirestoreD, 'Productos');
+      return collectionData(empleados, { idField: 'id' }) as Observable<Producto[]>
+    }
 
 }

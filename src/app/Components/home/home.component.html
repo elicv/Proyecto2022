@@ -25,6 +25,10 @@
       <li class="nav-item">
         <a style= "color: white" class="nav-link" href="#">Eliminar producto</a>
       </li>
+
+      <li class="nav-item">
+      <a style= "color: white" class="nav-link" href="#">Acerca de</a>
+    </li>
     </ul>
   </div>
 </nav>
@@ -34,7 +38,7 @@
   <ul>
     <li *ngFor = 'let product of productos'>
           {{product.nombre}}
-          {{product.nombre}}
+          <img [src]="" alt="">
     </li>
   </ul>
   <button class="boton" (click)="volver()">Back</button>

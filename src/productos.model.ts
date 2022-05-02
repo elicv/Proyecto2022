@@ -1,8 +1,8 @@
 export interface Producto{
-    id: String,
     nombre: String,
     precio: String,
-    descripcion: String
+    descripcion: String,
+    img64: unknown
 }
 
 
