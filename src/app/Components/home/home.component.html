@@ -34,12 +34,18 @@
 </nav>
 
 <div class="body">
-  <br>
-  <ul>
-    <li *ngFor = 'let product of productos'>
-          {{product.nombre}}
-          <img style="width: 200px; height: 200px" src="{{product.img64}}" alt="">
-    </li>
-  </ul>
-  <button class="boton" (click)="volver()">Back</button>
+<div class="conten">
+    <div class="Item" *ngFor = 'let product of productos'>
+      <div class="parte1" >
+          <label style="float: left;" class="labels"> {{product.nombre}}</label>
+          <label style="float: left; color: red" class="labels">₡ {{product.precio}}</label>
+          <label style="float: left;" class="labels">{{product.descripcion}}</label>
+      </div>
+      <div class="parte2" >
+          <img style="width: 100%; height: 100% ; padding: 10px" src="{{product.img64}}" alt="">
+      </div>  
+    </div>
+</div>
+
+<button class="boton" (click)="volver()">Back</button>
 </div>
