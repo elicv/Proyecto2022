@@ -61,4 +61,9 @@ export class LoginService {
       return collectionData(empleados, { idField: 'id' }) as Observable<Producto[]>
     }
 
+
+    getProducto(id:any) : Observable<any> {
+      return this.firestore.collection('Productos').doc().snapshotChanges();
+    }
+
 }

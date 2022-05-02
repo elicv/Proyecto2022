@@ -25,7 +25,7 @@ export class AgregarProductoComponent implements OnInit {
 
 
   volver() {
-    this.router.navigate(['/login']);
+    this.router.navigate(['/home']);
   }
 
   subirProducto(){

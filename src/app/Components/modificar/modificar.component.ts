@@ -13,8 +13,7 @@ export class ModificarComponent implements OnInit {
 
   constructor(private router: Router, private loginService: LoginService) { }
 
-  ngOnInit(): void {
-  }
+
   imagen: any [] = [];
 
   producto: Producto = {
@@ -24,6 +23,7 @@ export class ModificarComponent implements OnInit {
     img64 : ''
   }
 
+  nombre: any; 
 
   volver() {
     this.router.navigate(['/home']);
@@ -35,7 +35,9 @@ export class ModificarComponent implements OnInit {
 
 
   Consultar(){
-
+   this.loginService.getProducto(this.nombre).subscribe(data => {
+      console.log(data.payload.data());
+    })
   }
 
   CargarIMG(event:any){
@@ -48,6 +50,12 @@ export class ModificarComponent implements OnInit {
         this.producto.img64 = reader.result;
         console.log(reader.result)
       }
+  }
+
+
+  ngOnInit(): void {
+
+
   }
 
 }
