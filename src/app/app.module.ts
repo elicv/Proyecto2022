@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { CrearcuentaComponent } from './Components/crearcuenta/crearcuenta.component';
 import { AcercadeComponent } from './Components/acercade/acercade.component';
 import { AgregarProductoComponent } from './Components/agregar-producto/agregar-producto.component';
+import { ModificarComponent } from './Components/modificar/modificar.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AgregarProductoComponent } from './Components/agregar-producto/agregar-
     HomeComponent,
     CrearcuentaComponent,
     AcercadeComponent,
-    AgregarProductoComponent
+    AgregarProductoComponent,
+    ModificarComponent
   ],
   imports: [
     BrowserModule,
