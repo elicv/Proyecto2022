@@ -15,9 +15,17 @@ export class LoginService {
   
   constructor(private _Auth : AngularFireAuth,private firestore: AngularFirestore, private FirestoreD: Firestore ) {}
 
-  createcollection(Collection: string, data?: unknown){
-    this.firestore.collection(Collection).add(data);
-  }
+  async createcollection(Collection: string, data?: unknown){
+    try{
+      return  await this.firestore.collection(Collection).add(data);
+    }catch(error){
+      alert("No se agrego el producto")
+      console.log("El error es: " + error)
+      return null;
+    }
+
+    }
+    
 
 
   async login(email:string , password: string){

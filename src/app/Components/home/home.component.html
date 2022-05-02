@@ -38,7 +38,7 @@
   <ul>
     <li *ngFor = 'let product of productos'>
           {{product.nombre}}
-          <img [src]="" alt="">
+          <img style="width: 200px; height: 200px" src="{{product.img64}}" alt="">
     </li>
   </ul>
   <button class="boton" (click)="volver()">Back</button>

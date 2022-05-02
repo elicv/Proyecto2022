@@ -28,10 +28,15 @@ export class AgregarProductoComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
-
   subirProducto(){
-    this.loginService.createcollection("Productos", this.producto);
-    console.log(this.producto.nombre, this.producto.precio,this.producto.descripcion,this.producto.img64)
+    this.loginService.createcollection("Productos", this.producto).then(res => {
+      if(res==null){
+        console.log("No sirve",res)
+      }else{
+        alert("No se agrego el producto")
+        this.router.navigate(['/home']);
+      }
+    });
   }
 
   CargarIMG(event:any){
